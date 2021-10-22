@@ -8,7 +8,7 @@ function Snake() {
   this.y = 0;
   this.xspeed = 1;
   this.yspeed = 0;
-  this.total = 0;
+  this.total = 5;
   this.tail = [];
 
   this.eat = function(pos) {
