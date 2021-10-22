@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+
+  <title>Tetris</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+</head>
+<body>
+
+
+<section id="examples">
+  <div class="game" style="width:250px; height:500px;"></div>
+  
+  <div class="dropdown">
+    <h1 class="dropbtn">Theme</button>
+    <div class="dropdown-content">
+      <button onclick="gameboy()">Gameboy</button>
+      <button onclick="candy()">Candy</button>
+      <button onclick="modern()">Modern</button>
+      <button onclick="retro()">Retro</button>
+      <button onclick="lines()">Lines</button>
+    </div>
+  </div> 
+</section>
+
+<link rel="stylesheet" href="blockrain.css">
+<script src="assets/js/jquery-1.11.1.min.js"></script>
+<script src="blockrain.jquery.js"></script>
+
+<script>
+  function gameboy() {
+    $('.game').blockrain('theme', 'vim');
+  }
+
+  function candy() {
+    $('.game').blockrain('theme', 'candy');
+  }
+
+  function modern() {
+    $('.game').blockrain('theme', 'modern');
+  }
+
+  function retro() {
+    $('.game').blockrain('theme', 'retro');
+  }
+
+  function lines() {
+    $('.game').blockrain('theme', 'custom');
+  }
+
+  $('.game').blockrain({
+    playText: 'Tetris',
+    playButtonText: 'Try It',
+    gameOverText: 'Game Over',
+    restartButtonText: 'Play Again',
+    scoreText: 'Score',
+    speed: 25,
+    theme: 'candy',
+  });
+
+</script>
+
+</body>
+</html>
